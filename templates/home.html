@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h1>Welcome to Your Course Management System</h1>
+    <p class="lead">Manage your courses with ease using our application.</p>
+
+    <div class="card-deck mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">View Courses</h5>
+                <p class="card-text">Browse through your list of courses, view details, and manage them effortlessly.</p>
+                <a href="{{ url_for('viewCourse') }}" class="btn btn-primary">View Courses</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add a Course</h5>
+                <p class="card-text">Expand your course catalog by adding new courses with detailed information.</p>
+                <a href="{{ url_for('add_course') }}" class="btn btn-success">Add a Course</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Edit / Delete Courses</h5>
+                <p class="card-text">Update course details, ensuring your information is always up-to-date.</p>
+                <a href="{{ url_for('courses') }}" class="btn btn-warning">Edit Courses</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Logout</h5>
+                <p class="card-text">Logout from your account.</p>
+                <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

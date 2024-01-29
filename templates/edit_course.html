@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Course</title>
+    <!-- Add Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Edit Course</h2>
+    <form method="POST" action="/courses/edit/{{ course[0] }}">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ course[1] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" required>{{ course[2] }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="instructor">Instructor:</label>
+            <input type="text" class="form-control" id="instructor" name="instructor" value="{{ course[3] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="credits">Credits:</label>
+            <input type="number" class="form-control" id="credits" name="credits" value="{{ course[4] }}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Course</button>
+    </form>
+    <a href="{{ url_for('courses') }}" class="btn btn-secondary mt-3">Back to Courses</a>
+
+    <!-- Add Bootstrap JS and Popper.js CDN links (if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
