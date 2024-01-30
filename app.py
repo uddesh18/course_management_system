@@ -8,10 +8,10 @@ app = Flask(__name__)
 bcrypt_new = Bcrypt(app) 
 
 # Configure MySQL
-app.config['MYSQL_HOST'] = 'tci-dev-db.c7bvdckv2va3.ap-south-1.rds.amazonaws.com'
-app.config['MYSQL_USER'] = 'tcidevdb'
-app.config['MYSQL_PASSWORD'] = 'tcidevfabricpass'
-app.config['MYSQL_DB'] = 'Swagger'
+app.config['MYSQL_HOST'] = ######
+app.config['MYSQL_USER'] = ######
+app.config['MYSQL_PASSWORD'] = ######
+app.config['MYSQL_DB'] = ######
 
 mysql = MySQL(app)
 
