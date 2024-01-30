@@ -49,8 +49,10 @@ def login():
         cur.execute("SELECT * FROM users WHERE email = %s", (email,))
         user = cur.fetchone()
         cur.close()
-
+        print(password)
+        
         my_str_as_bytes = str.encode(user[3])
+        print(my_str_as_bytes)
         if user and bcrypt.checkpw(password=password , hashed_password=my_str_as_bytes) :
             session['user_id'] = user[0]
             print(session['user_id'])
@@ -97,7 +99,7 @@ def add_course():
             mysql.connection.commit()
             cur.close()
 
-            return redirect(url_for('courses'))
+            return redirect(url_for('viewCourse'))
 
         return render_template('add_course.html')
     return redirect(url_for('login'))
