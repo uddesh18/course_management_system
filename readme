@@ -1,0 +1,33 @@
+Course Management System
+
+Step 1.setup a virtual Enviornment 
+python3 -m venv env
+
+Step 2.Activate Enviornment 
+env\Scripts\activate
+
+Step 3.Install all dependencies and libraries from requirement.txt
+pip install -r requirements.txt
+
+Step 4.Run command 
+Python app.py
+
+
+
+# Database MYSQL
+
+On my local created database named as Swagger
+
+Tables :
+1.users -> 
+id
+name
+email
+password
+
+2.courses  -> 
+id
+title
+description
+instructor
+credits

@@ -1,10 +1,10 @@
+import webbrowser
 from flask import Flask, jsonify, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import bcrypt
 from flask_bcrypt import Bcrypt 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
 bcrypt_new = Bcrypt(app) 
 
 # Configure MySQL
@@ -59,13 +59,6 @@ def login():
             return redirect(url_for('home'))
 
     return render_template('login.html')
-
-# Dashboard
-@app.route('/dashboard')
-def dashboard():
-    if 'user_id' in session:
-        return render_template('dashboard.html')
-    return redirect(url_for('login'))
 
 # Logout
 @app.route('/logout')
@@ -150,4 +143,5 @@ def viewCourse():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
+    webbrowser.open('http://127.0.0.1:5000/login')
     app.run(debug=True)
